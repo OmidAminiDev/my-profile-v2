@@ -1,0 +1,197 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  direction: rtl;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* نوار اسکرول در مرورگرهای Webkit */
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2c2c2d;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6f7277;
+  border-radius: px;
+
+  /* کوچک‌تر شدن thumb نسبت به track */
+  margin: 0px; 
+  border: 3px solid transparent; /* فاصله ایجاد می‌کنه */
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6f7277;
+}
+
+
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.mouse-light {
+  position: fixed;
+  pointer-events: none;
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 10%, transparent 70%);
+  z-index: 1000;
+  transition: background 0.3s ease;
+  mix-blend-mode: lighten; /* اختیاری برای زیبایی بیشتر */
+}
+
+
+
+
+.left {
+  width: 45%;
+  background-color: #061631;
+  color: white;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  direction: ltr;
+  
+}
+
+
+
+
+.left-h1{
+  font-size: 55px;
+  transform: translate(150px, 40px);
+}
+
+
+
+
+
+
+.left-h2{
+  font-size: 20px;
+  transform: translate(150px, 20px);
+}
+
+
+
+
+
+
+
+.left-ul{
+  font-size: 10;
+  transform: translate(150px, 80px);
+}
+.left-ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 50px;
+}
+
+.left-ul li {
+  margin: 20px 0;
+}
+
+.left-ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #94a3b8;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding-left: 40px; /* فاصله بین خط و متن */
+  display: inline-block;
+  transition: color 0.3s ease, padding-left 0.3s ease, transform 0.3s ease;
+}
+
+.left-ul li a::before {
+  content: "";
+  position: absolute;
+  left: 0; /* خط بیاد سمت چپ */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background-color: #475569;
+  transition: background-color 0.3s ease, width 0.3s ease;
+  z-index: 1;
+}
+
+.left-ul li a:hover {
+  color: #f1f5f9;
+  padding-left: 85px; /* متن از خط فاصله بگیره وقتی hover شد */
+  transform: translateX(5px); /* متن کمی به راست حرکت کنه */
+}
+
+.left-ul li a:hover::before {
+  width: 65px;
+  background-color: #f1f5f9;
+}
+
+
+
+.left-ul2{
+  transform: translate(150px, 280px);
+}
+
+.left-ul2 {
+  display: flex;         /* بچه‌ها کنار هم قرار بگیرن */
+  justify-content: start; /* از سمت چپ شروع بشن */
+  gap: 20px;             /* فاصله بین آیکن‌ها */
+  margin-top: 30px;
+  list-style: none;
+  padding: 0;
+}
+
+.left-ul2 li a {
+  color: white;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.left-ul2 li a:hover {
+  color: #38bdf8;          /* تغییر رنگ در حالت hover */
+  transform: scale(1.2);   /* افکت بزرگ‌نمایی هنگام hover */
+}
+
+
+
+.right {
+  width: 55%;
+  padding: 20px;
+  overflow-y: scroll;
+  height: 100vh;
+  background-color: #061631;
+  direction: ltr;
+}
+
+
+/* باکس‌ها */
+.box {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.box h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.box p {
+  font-size: 1rem;
+  color: #555;
+}

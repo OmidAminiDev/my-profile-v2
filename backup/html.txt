@@ -1,0 +1,215 @@
+HTML 
+
+
+111111111111111
+
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>فرم با اسکرول داخلی</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- نوار سمت چپ (ثابت) -->
+  <div class="sidebar">
+    <h2>Omid Amini</h2>
+    <ul>
+      <li><a href="#section1">ABOUT</a></li>
+      <li><a href="#section2">EXPERIENCE</a></li>
+      <li><a href="#section3">PROJECTS</a></li>
+    </ul>
+  </div>
+
+  <!-- محتوای سمت راست (اسکرول‌پذیر) -->
+  <div class="content">
+    <h1>فرم ثبت نوبت</h1>
+    
+    <form>
+
+      <!-- بخش ۱ -->
+      <div id="section1">
+        <h3>اطلاعات شخصی</h3>
+        <label for="name">نام و نام خانوادگی</label>
+        <input type="text" id="name" name="name" placeholder="نام خود را وارد کنید" required>
+
+        <label for="email">ایمیل</label>
+        <input type="email" id="email" name="email" placeholder="ایمیل خود را وارد کنید" required>
+      </div>
+
+      <!-- بخش ۲ -->
+      <div id="section2">
+        <h3>انتخاب خدمت</h3>
+        <label for="service">نوع خدمت</label>
+        <select id="service" name="service">
+          <option value="lash">مژه</option>
+          <option value="nail">ناخن</option>
+        </select>
+      </div>
+
+      <!-- بخش ۳ -->
+      <div id="section3">
+        <h3>توضیحات بیشتر</h3>
+        <label for="notes">توضیحات</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="توضیح اضافی..."></textarea>
+      </div>
+
+      <button type="submit">ارسال</button>
+    </form>
+  </div>
+
+</div>
+
+</body>
+</html>
+
+
+
+22222222222222222222222222
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Split Layout</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="right">
+      <h1>سمت چپ</h1>
+      <p>این قسمت همیشه ثابته</p>
+    </div>
+    <div class="left">
+      <h2>سمت راست</h2>
+      <p>محتوای قابل اسکرول</p>
+      <p>...</p>
+      <p>محتوا زیاد...</p>
+      <!-- تکرار محتوا برای تست اسکرول -->
+      <p>تکرار</p><p>تکرار</p><p>تکرار</p><p>تکرار</p><p>تکرار</p><p>تکرار</p><p>تکرار</p>
+      <p>و باز هم ادامه...</p>
+    </div>
+  </div>
+</body>
+</html>
+
+
+333333333333333333333333333333333
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Split Layout</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="right">
+      
+      
+    </div>
+    <div class="left">
+      <h1 class="left-h1">Omid Amini</h1>
+      <h2 class="left-h2">Computer Engineering<br>Student</h2>
+      <ul class="left-ul">
+        <li><a href="#section1">ABOUT</a></li>
+        <li><a href="#section2">EXPERIENCE</a></li>
+        <li><a href="#section3">PROJECTS</a></li>
+      </ul>
+      
+      
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+44444444444444444444444444444444444
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Split Layout</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<div class="mouse-light" id="mouseLight"></div>
+
+<script>
+  const light = document.getElementById('mouseLight');
+
+  document.addEventListener('mousemove', e => {
+    light.style.left = `${e.clientX - 450}px`;  // نصف 1200
+    light.style.top = `${e.clientY - 450}px`;
+  });
+</script>
+
+
+<body>
+  <div class="container">
+
+    <div class="right">
+
+      <div class="box" id="about">
+        <h3>About</h3>
+        <p>I’m a developer passionate about crafting accessible, pixel-perfect user interfaces that blend thoughtful design with robust engineering. My favorite work lies at the intersection of design and development, creating experiences that not only look great but are meticulously built for performance and usability.
+          Currently, I'm a Senior Front-End Engineer at Klaviyo, specializing in accessibility. I contribute to the creation and maintenance of UI components that power Klaviyo’s frontend, ensuring our platform meets web accessibility standards and best practices to deliver an inclusive user experience.
+          In the past, I've had the opportunity to develop software across a variety of settings — from advertising agencies and large corporations to start-ups and small digital product studios. Additionally, I also released a comprehensive video course a few years ago, guiding learners through building a web app with the Spotify API.
+          In my spare time, I’m usually climbing, reading, hanging out with my wife and two cats, or running around Hyrule searching for Korok seeds
+         
+          .</p>
+      </div>
+
+      <div class="box" id="experience">
+        <h3>Experience</h3>
+        <p>Content for Experience section.</p>
+      </div>
+
+      <div class="box" id="projects">
+        <h3>Projects</h3>
+        <p>Content for Projects section.</p>
+      </div>
+
+    </div>
+    
+    <div class="left">
+
+      <h1 class="left-h1">Omid Amini</h1>
+
+      <h2 class="left-h2">Computer Engineering<br>Student</h2>
+
+      <ul class="left-ul">
+        <li><a href="#section1">ABOUT</a></li>
+        <li><a href="#section2">EXPERIENCE</a></li>
+        <li><a href="#section3">PROJECTS</a></li>
+      </ul>
+
+      <ul class="left-ul2">
+        <li><a href="https://github.com/OmidAminiDev/" target="_blank"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+      
+
+    </div>
+  </div>
+</body>
+</html>
+
+
+

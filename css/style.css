@@ -8,6 +8,15 @@ html {
   scroll-behavior: smooth;
 }
 
+#about {
+  margin-top: 100px; /* این مقدار را به دلخواه تنظیم کنید */
+}
+
+
+#projects {
+  min-height: 500px;
+}
+
 /* نوار اسکرول در مرورگرهای Webkit */
 ::-webkit-scrollbar {
   width: 16px;
@@ -46,15 +55,12 @@ html {
   width: 900px;
   height: 900px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 10%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 10%, transparent 70%);
   z-index: 1000;
   transition: background 0.3s ease;
   mix-blend-mode: lighten; /* اختیاری برای زیبایی بیشتر */
 }
-
-
-
-
+ 
 .left {
   width: 45%;
   background-color: #061631;
@@ -64,33 +70,22 @@ html {
   top: 0;
   height: 100vh;
   direction: ltr;
-  
+
 }
-
-
-
-
+ 
 .left-h1{
   font-size: 55px;
   transform: translate(150px, 40px);
 }
 
-
-
-
-
-
+ 
 .left-h2{
   font-size: 20px;
   transform: translate(150px, 20px);
+
 }
 
-
-
-
-
-
-
+ 
 .left-ul{
   font-size: 10;
   transform: translate(150px, 80px);
@@ -166,7 +161,22 @@ html {
   transform: scale(1.2);   /* افکت بزرگ‌نمایی هنگام hover */
 }
 
+.left-ul li a.active {
+  color: #f1f5f9;
+  font-weight: bold;
+  transform: translateX(5px);
+}
 
+.left-ul li a.active {
+  color: #f1f5f9;
+  padding-left: 100px;
+  transform: translateX(5px);
+}
+
+.left-ul li a.active::before {
+  width: 80px;
+  background-color: #f1f5f9;
+}
 
 .right {
   width: 55%;
@@ -175,6 +185,7 @@ html {
   height: 100vh;
   background-color: #061631;
   direction: ltr;
+ 
 }
 
 
@@ -184,6 +195,7 @@ html {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px; /* فاصله بین بخش‌ها */
 }
 
 .box h3 {
